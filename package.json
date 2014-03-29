@@ -1,0 +1,13 @@
+{
+  "name": "language-cirru",
+  "version": "0.0.1",
+  "description": "Syntax highlighting for Ciru",
+  "activationEvents": ["language-cirru:toggle"],
+  "repository": "https://github.com/Cirru/language-cirru",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}
