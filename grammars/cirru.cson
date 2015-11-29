@@ -13,7 +13,7 @@ patterns: [
   ]
 ,
   name: 'constant.numeric.cirru'
-  match: '\\b[\\d\\.]+_\\b'
+  match: '\\b[\\d\\._]+\\b'
 ,
   name: 'keyword.operator.cirru'
   match: '(?=^)\\s*\\,'
