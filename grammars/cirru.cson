@@ -4,6 +4,38 @@ fileTypes: [
   'cirru'
 ]
 patterns: [
+  name: 'function.cirru'
+  match: '(?=^(\\s*))[^\\(\\)\\s\\,]+'
+,
+  name: 'function.cirru'
+  match: '(?<=\\()[^\\(\\)\\s\\,]+'
+,
+  name: 'function.cirru'
+  match: '(?=\\s+\\$\\s+)[^\\(\\)\\s\\,]+'
+,
+  name: 'calling.cirru'
+  match: '(?=^)\\s*([^\\(\\)\\s\\,]+)'
+  captures:
+    '1':
+      name: 'function.cirru'
+,
+  name: 'calling.cirru'
+  match: '((\\$\\s+)+)([^\\(\\)\\s\\,]+)'
+  captures:
+    '2':
+      name: 'operator.cirru'
+    '3':
+      name: 'function.cirru'
+,
+  name: 'operator.cirru'
+  match: '[\\)\\(,]|(?=\\s)\\$(?=\\s*$)'
+,
+  name: 'numeric.cirru'
+  match: '\\b[\\d\\._]+\\b'
+,
+  name: 'variable.cirru'
+  match: '(?!=($\\s+))[^\\(\\)\\s\\,]+'
+,
   begin: '"'
   end: '"'
   name: 'string.quoted.double.cirru'
@@ -11,36 +43,4 @@ patterns: [
     match: '\\\\.'
     name: 'constant.character.escape.cirru'
   ]
-,
-  name: 'constant.numeric.cirru'
-  match: '\\b[\\d\\._]+\\b'
-,
-  name: 'keyword.operator.cirru'
-  match: '(?=^)\\s*\\,'
-,
-  name: 'entity.name.function.cirru'
-  match: '(?=^)\\s*[^\\(\\)\\s\\$][^\\(\\)\\s]*'
-,
-  name: 'entity.name.function.cirru'
-  match: '(?<=\\()[^\\(\\)\\s\\$][^\\(\\)\\s]*'
-,
-  name: 'entity.name.function.cirru'
-  match: '(?=\\$\\s+)[^\\(\\)\\s\\$][^\\(\\)\\s]*'
-,
-  name: 'keyword.operator.cirru'
-  match: '\\s\\$\\s*$'
-,
-  name: 'entity.cirru'
-  match: '\\s+((\\$\\s+)+)([^\\(\\)\\s\\$][^\\(\\)\\s]*)'
-  captures:
-    '1':
-      name: 'keyword.operator.cirru'
-    '3':
-      name: 'entity.name.function.cirru'
-,
-  name: 'keyword.operator.cirru'
-  match: '[\\)\\(]'
-,
-  name: 'variable.parameter.cirru'
-  match: '(?!=($\\s+))[^\\(\\)\\s\\$][^\\(\\)\\s]*'
 ]

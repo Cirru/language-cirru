@@ -1,21 +1,32 @@
 
-.source.cirru .keyword.cirru {
-  color: hsl(292, 100%, 39%);
+.source.cirru .operator.cirru {
+  color: hsl(292, 100%, 30%);
 }
 
-.source.cirru .entity.cirru {
-  color: hsl(31, 33%, 60%);
+.source.cirru .function.cirru {
+  background-color: hsl(300, 80%, 22%);
+  color: hsl(0,0%,80%);
 }
 
 .source.cirru .variable.cirru {
-  color: hsl(170, 49%, 37%);
+  background-color: hsl(170,49%,16%);
+  color: hsl(0,0%,50%);
 }
 
-.source.cirru .string.cirru {
-  color: hsl(0, 0%, 48%);
-  background-color: hsla(0, 100%, 100%, 0.05);
+.source.cirru .string.cirru.cirru {
+  color: hsl(0, 0%, 68%);
+  background-color: hsl(120, 40%, 40%);
 }
 
-.source.cirru .numberic.cirru {
-  color: hsl(0, 83%, 48%);
+.source.cirru .numeric.cirru {
+  background-color: hsl(340, 83%, 36%);
+  color: hsl(0,0%,70%);
+}
+
+.function.cirru,
+.variable.cirru,
+.numeric.cirru,
+.string.cirru {
+  padding: 0 4px;
+  border-radius: 4px;
 }
