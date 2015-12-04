@@ -5,22 +5,22 @@ fileTypes: [
 ]
 patterns: [
   name: 'function.cirru'
-  match: '(?=^(\\s*))[^\\(\\)\\s\\,]+'
+  match: '(?=^(\\s*))[^\\(\\)\\s\\,\"]+'
 ,
   name: 'function.cirru'
-  match: '(?<=\\()[^\\(\\)\\s\\,]+'
+  match: '(?<=\\()[^\\(\\)\\s\\,\"]+'
 ,
   name: 'function.cirru'
-  match: '(?=\\s+\\$\\s+)[^\\(\\)\\s\\,]+'
+  match: '(?=\\s+\\$\\s+)[^\\(\\)\\s\\,\"]+'
 ,
   name: 'calling.cirru'
-  match: '(?=^)\\s*([^\\(\\)\\s\\,]+)'
+  match: '(?=^)\\s*([^\\(\\)\\s\\,\"]+)'
   captures:
     '1':
       name: 'function.cirru'
 ,
   name: 'calling.cirru'
-  match: '((\\$\\s+)+)([^\\(\\)\\s\\,]+)'
+  match: '((\\$\\s+)+)([^\\(\\)\\s\\,\"]+)'
   captures:
     '2':
       name: 'operator.cirru'
@@ -34,7 +34,7 @@ patterns: [
   match: '\\b[\\d\\._]+\\b'
 ,
   name: 'variable.cirru'
-  match: '(?!=($\\s+))[^\\(\\)\\s\\,]+'
+  match: '(?!=($\\s+))[^\\(\\)\\s\\,\"]+'
 ,
   begin: '"'
   end: '"'
