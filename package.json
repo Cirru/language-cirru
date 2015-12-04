@@ -1,6 +1,6 @@
 {
   "name": "language-cirru",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Syntax highlighting for Ciru",
   "activationEvents": [
     "language-cirru:toggle"
