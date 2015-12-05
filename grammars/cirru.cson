@@ -20,7 +20,7 @@ patterns: [
       name: 'function.cirru'
 ,
   name: 'calling.cirru'
-  match: '((\\$\\s+)+)([^\\(\\)\\s\\,\"]+)'
+  match: '((\\$\\s+)+)([^\\(\\)\\s\\,\"]+)?'
   captures:
     '2':
       name: 'operator.cirru'
